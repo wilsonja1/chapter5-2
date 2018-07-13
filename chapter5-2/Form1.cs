@@ -18,7 +18,7 @@ namespace chapter5_2
         public Form1()
         {
             InitializeComponent();
-            farmer = new Farmer() { NumberOfCows = 15 };
+            farmer = new Farmer(15, 30);
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)

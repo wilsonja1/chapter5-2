@@ -8,10 +8,17 @@ namespace chapter5_2
 {
     class Farmer
     {
-        public int BagsOfFeed;
-        public const int FeedMultiplier = 30;
+        public int BagsOfFeed { get; private set; }
+        private int feedMultiplier = 30;
+        private int FeedMultiplier { get { return feedMultiplier; } }
 
         private int numberOfCows;
+
+        public Farmer(int x, int y)
+        {
+            this.feedMultiplier = y;
+            NumberOfCows = x;
+        }
 
         public int NumberOfCows
         {
